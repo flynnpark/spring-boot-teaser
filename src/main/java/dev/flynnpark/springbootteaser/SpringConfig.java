@@ -1,6 +1,7 @@
 package dev.flynnpark.springbootteaser;
 
 import dev.flynnpark.springbootteaser.repository.JdbcMemberRepository;
+import dev.flynnpark.springbootteaser.repository.JdbcTemplateMemberRepository;
 import dev.flynnpark.springbootteaser.repository.MemberRepository;
 import dev.flynnpark.springbootteaser.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +28,6 @@ public class SpringConfig {
 
     @Bean
     public MemberRepository memberRepository() {
-        return new JdbcMemberRepository(dataSource);
+        return new JdbcTemplateMemberRepository(dataSource);
     }
 }
