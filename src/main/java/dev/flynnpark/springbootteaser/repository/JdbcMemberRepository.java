@@ -48,7 +48,7 @@ public class JdbcMemberRepository implements MemberRepository {
     @Override
     public Optional<Member> findById(Long id) {
         String sql = "SELECT * FROM member WHERE id = ?";
- 
+
         Connection conn = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;
