@@ -1,5 +1,6 @@
 package dev.flynnpark.springbootteaser;
 
+import dev.flynnpark.springbootteaser.aop.TimeTraceAop;
 import dev.flynnpark.springbootteaser.repository.MemberRepository;
 import dev.flynnpark.springbootteaser.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,5 +20,4 @@ public class SpringConfig {
     public MemberService memberService() {
         return new MemberService(memberRepository);
     }
-
 }
